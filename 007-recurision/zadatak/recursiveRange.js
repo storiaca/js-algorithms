@@ -21,3 +21,14 @@ function recursiveRange(num){
 }
 
 recursiveRange(10)
+
+// sa rekurzijom
+function recursiveRange(num){
+   let result = 0
+
+    if(num === 1) return 1
+
+    result = num + recursiveRange(num - 1)
+
+    return result;
+}
