@@ -18,4 +18,4 @@ function linearSearch2(arr, val) {
 
   return -1;
 }
-// On
+// O(n)
