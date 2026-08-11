@@ -15,8 +15,8 @@
 // ["Steele", "Colt", "Data Structures", "Algorithms"].sort(compareByLen)
 
 /**
- * 
- * @param [numbers] arr 
+ *
+ * @param [numbers] arr
  * @returns Sorted array
  */
 // function bubbleSort(arr) {
@@ -35,17 +35,18 @@
 //     return arr
 // }
 
+// ES2015 Solution
 function bubbleSort(arr) {
-    const swap = (arr, idx1, idx2) => {
-        [arr[idx1], arr[idx2]] = [arr[idx2], arr[idx1]]
-    }
+  const swap = (arr, idx1, idx2) => {
+    [arr[idx1], arr[idx2]] = [arr[idx2], arr[idx1]];
+  };
 
-    for (let i = arr.length; i > 0; i--) {
-        for (let j = 0; j < i -1; j++) {
-            swap(arr, j, j + 1)
-        }
+  for (let i = arr.length; i > 0; i--) {
+    for (let j = 0; j < i - 1; j++) {
+      swap(arr, j, j + 1);
     }
-    return arr
+  }
+  return arr;
 }
 
-bubbleSort([37, 45, 29, 8, 12, 88, -3])
+bubbleSort([37, 45, 29, 8, 12, 88, -3]);
