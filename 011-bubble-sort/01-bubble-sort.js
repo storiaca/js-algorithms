@@ -50,3 +50,7 @@ function bubbleSort(arr) {
 }
 
 bubbleSort([37, 45, 29, 8, 12, 88, -3]);
+
+/**
+ * Big O is n squared
+ */
