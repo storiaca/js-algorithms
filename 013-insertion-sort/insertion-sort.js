@@ -17,15 +17,17 @@ function insertionSort() {
   return a;
 }
 
-console.log(insertionSort(a));
-// output   [1, 2, 3, 4, 5, 6, 12, 14, 77]
-function linearSearch(arr, num) {
-  let br = -1;
-  for (let i = 0; i <= arr.length; i++) {
-    if (arr[i] === num) return (br = i);
+// Njegovo resenje sa var
+function insertionSort(arr) {
+  for (let i = 1; i < arr.length; i++) {
+    let currentVal = arr[i];
+    for (var j = i - 1; j >= 0 && arr[j] > currentVal; j--) {
+      arr[j + 1] = arr[j];
+    }
+    arr[j + 1] = currentVal;
+    console.log(arr);
   }
-
-  return br;
+  return arr;
 }
 
-linearSearch([4, 6, 7, 89, 23], 9);
+insertionSort([2, 1, 9, 76, 4]);
