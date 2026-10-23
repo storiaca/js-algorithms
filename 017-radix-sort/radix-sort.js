@@ -26,8 +26,10 @@ function radixSort(nums) {
       let digit = getDigit(nums[i], k)
       digitBuckets[digit].push(nums[i])
     }
+    nums = [].concat(...digitBuckets) 
   }
-  console.log(maxDigitCount)
+  return nums
 }
+
 
 radixSort([23,345,5467,2345, 9852])
